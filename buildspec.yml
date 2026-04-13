@@ -2,10 +2,8 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      docker: 20
     commands:
-      - echo Installing Docker...
+      - echo Installing phase...
 
   pre_build:
     commands:
@@ -19,7 +17,7 @@ phases:
       - echo Running Docker container
       - docker run -d -p 5000:5000 myapp
 
-      - echo Listing running containers
+      - echo Listing containers
       - docker ps
 
   post_build:
